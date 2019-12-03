@@ -2,6 +2,8 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const morgan =  require("morgan");
 
+const db = require("./models/index");
+
 const PORT = process.env.PORT || 8080;
 
 const app = express();
@@ -16,11 +18,10 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 //Routes
-app.get("/", (req, res) => {
-    res.render("index");
-})
+app.use(require("./controllers/staticController"));
 
-
-app.listen(PORT, () => {
-    console.log(`==> Server listening at http://localhost: ${PORT}/`)
+db.squelize.sync({force: true }).then(() => {
+    app.listen(PORT, () => {
+        console.log(`==> Server listening at http://localhost: ${PORT}/`)
+    });
 });
