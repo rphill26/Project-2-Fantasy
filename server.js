@@ -1,6 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const morgan =  require("morgan");
+const session = require("express-session");
 
 const db = require("./models/index");
 
@@ -16,11 +17,47 @@ app.set("view engine", "handlebars");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(session({
+    secret:"keyboard cat"
+}))
 
+//Static Assests
+app.use(express.static("public"));
+
+//Authentication
+app.use((req, res, next) => {
+    if (!req.session.userId) {
+      return next();
+    }
+  
+    db.User.findByPk(req.session.userId)
+      .then(user => {
+        if (!user) {
+          console.log("Cannot find user in session, destroying session.");
+          return req.session.destroy(err => {
+            if (err) throw err;
+          });
+        }
+  
+        req.user = user;
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        next();
+      });
+  });
+  
 //Routes
 app.use(require("./controllers/staticController"));
+app.use(require("./controllers/userController"));
+app.use(require("./controllers/authController"));
 
-db.squelize.sync({force: true }).then(() => {
+
+// Sync Schema
+db.sequelize.sync({force: process.env.NODE_ENV !== "production" })
+    .then(() => {
     app.listen(PORT, () => {
         console.log(`==> Server listening at http://localhost: ${PORT}/`)
     });
