@@ -13,29 +13,35 @@
 <body>
 
     <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #5d0e5e">
-        <a class="column is-two-thirds">
-            <img src="./assets/Logo UNCC.png" alt="Logo" style="height: 100%; width: 200px;">
+        <a class="column is-two-thirds" href="mainpage.html">
+            <img src="./assets/Logo UNCC.png"  alt="Logo" style="height: 100%; width: 200px;">
         </a>
         <!-- https://courses.cs.washington.edu/courses/cse154/cp/18au/cp5/inkling/barclays-logo.png -->
 
         <div class="section column is-one-third" style="float: right;">
 
-            <!-- {{#if user}}
-            {{user.email}} | -->
-            <a class="button" href="/login"> Login </a> |
+             <!-- {{#if user}}
+            {{user.email}} |  -->
+            <a class="button" href="./mainpage.html"> Login </a> |
 
 
-            <!-- {{else}} -->
+             <!-- {{else}} -->
 
-            <a class="button" href="/register"> Register </a> |
+            <a class="button" href="./register.html"> Register </a> |
             <!-- {{/if}} -->
 
-            <a class="button" href="/logout.html"> Logout </a>
+            <!-- <a class="button" href="/logout.html"> Logout </a> -->
         </div>
     </nav>
+
     <div class="box container" style="align-content: center; margin-top: 50px; margin-left: 100px;">
+        <div class="columns" style="background-color: gray;">
+            <div class="column is-half"><strong>Login</strong></div>
+            <div class="column is-half"><strong>Register</strong></div>
+        </div>
+
         <div class="columns">
-            <div class="column is-half" style="padding-bottom: 15px;"> Login
+            <div class="column is-half" style="padding-bottom: 15px;"> 
                 <div class="field">
                     <p class="control has-icons-left has-icons-right">
                         <input class="input" type="email" placeholder="Email">
@@ -46,6 +52,7 @@
                             <i class="fas fa-check"></i>
                         </span>
                     </p>
+
                 </div>
                 <div class="field">
                     <p class="control has-icons-left">
@@ -55,9 +62,16 @@
                         </span>
                     </p>
                 </div>
+
+                <div class="buttons has-addons is-right is-focused" type="submit">
+                    <button class="button"><a href="#">Login</a></button>
+
+                </div>
+
+
             </div>
 
-            <div class="column is-half" style="padding-bottom: 15px;"> Register
+            <div class="column is-half" style="padding-bottom: 15px;"> 
                 <p>
                     <strong>Don't have a Premier League account?</strong>
                     <br>
@@ -69,6 +83,10 @@
                         Customized site content
                         Favorite Club information and notifications</h2>
                 </p>
+                <div class="buttons has-addons is-right is-focused" type="submit">
+                    <button class="button"><a href="register.html">Register</a></button>
+
+                </div>
             </div>
         </div>
 
