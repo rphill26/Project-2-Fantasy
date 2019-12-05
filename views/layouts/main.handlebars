@@ -17,13 +17,21 @@
 
 <body>
 
+<<<<<<< HEAD
+    <header id="masterheading">
+    <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="width: 100%; background-color: #5d0e5e">
+        <a class="column-sm-8" href="main.handlebars">
+            <img src="../../public/assests/images/Logo-UNCC.png"  alt="Logo" style="height: 100%; width: 200px;">
+=======
     <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #5d0e5e">
         <a class="column is-two-thirds" href="/">
             <img src="assests/images/Logo-UNCC.png" alt="Logo" style="height: 100%; width: 200px;">
+>>>>>>> 05d69f5cc443096e5e304060676ed17b37070684
         </a>
         <!-- https://courses.cs.washington.edu/courses/cse154/cp/18au/cp5/inkling/barclays-logo.png -->
 
-        <div class="section column is-one-third" style="float: right;">
+        <div class="section column-sm-4" style="float: right;">
 
              <!-- {{#if user}}
             {{user.email}} |  -->
@@ -35,9 +43,10 @@
             <a class="button" href="views\layouts\register.handlebars"> Register </a> |
             <!-- {{/if}} -->
 
-            <!-- <a class="button" href="/logout.html"> Logout </a> -->
+            <a class="button" href="/logout.html"> Logout </a>
         </div>
     </nav>
+    </header>
 
     {{{ body }}}
 
@@ -50,7 +59,6 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/signup.js"></script>
 </body>
-
 <footer class="footer">
     <p class="p3">
         Copyright &#169; UNCC Fantasy Football
