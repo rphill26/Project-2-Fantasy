@@ -1,6 +1,9 @@
 'use strict';
+
+const db = require("./user");
+
 module.exports = (sequelize, DataTypes) => {
-  const Players = sequelize.define('Players', {
+  const Players = sequelize.define('Player', {
     name: DataTypes.STRING,
     age: DataTypes.INTEGER,
     position: DataTypes.STRING,
@@ -15,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   Players.associate = function(models) {
     // associations can be defined here
+    Players.belongsTo(models.User);
   };
   return Players;
 };
