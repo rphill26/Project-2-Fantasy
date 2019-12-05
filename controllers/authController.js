@@ -26,6 +26,10 @@ router.post("/login", (req, res) => {
         })
 });
 
+router.get("/register", (req, res) => {
+    res.render("auth/register");
+});
+
 router.get("/logout", (req, res) => {
     req.session.destroy(err => {
       if (err) throw err;
