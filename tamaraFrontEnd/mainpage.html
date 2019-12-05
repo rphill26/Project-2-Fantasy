@@ -18,19 +18,21 @@
         </a>
         <!-- https://courses.cs.washington.edu/courses/cse154/cp/18au/cp5/inkling/barclays-logo.png -->
 
-        <div class="section column is-one-third" style="float: right;">
+        <div class="column is-one-third">
+            <div class="buttons is-centered">
+                <!-- {{#if user}}
+               {{user.email}} |  -->
+               <a class="button is-white is-primary is-inverted is-outlined" style="align-content: center;" href="./mainpage.html"> Login </a> |
+   
+   
+                <!-- {{else}} -->
+   
+               <a class="button is-white is-primary is-inverted is-outlined" style="align-content: center;" href="./register.html"> Register </a> |
+               <!-- {{/if}} -->
+   
+               <!-- <a class="button" href="/logout.html"> Logout </a> -->
 
-             <!-- {{#if user}}
-            {{user.email}} |  -->
-            <a class="button" href="./mainpage.html"> Login </a> |
-
-
-             <!-- {{else}} -->
-
-            <a class="button" href="./register.html"> Register </a> |
-            <!-- {{/if}} -->
-
-            <!-- <a class="button" href="/logout.html"> Logout </a> -->
+            </div>
         </div>
     </nav>
 
@@ -78,10 +80,13 @@
                     <br>
                     <h2>In that case, you are missing out on:</h2>
                     <br>
-                    <h2>Fantasy Premier League football game
-                        Exclusive fan services
-                        Customized site content
-                        Favorite Club information and notifications</h2>
+                    <h2>- Fantasy Premier League football game,
+                        <br>
+                        - Exclusive fan services,
+                        <br>
+                        - Customized site content,
+                        <br>
+                        - Favorite Club information and notifications</h2>
                 </p>
                 <div class="buttons has-addons is-right is-focused" type="submit">
                     <button class="button"><a href="register.html">Register</a></button>
