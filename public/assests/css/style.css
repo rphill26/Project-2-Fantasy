@@ -122,3 +122,9 @@ height: 60px;
 flex-shrink: 0;
 text-align: center;
 }
+
+.p3 {
+  text-align:center;
+  color:white;
+  margin: auto 0;
+}
