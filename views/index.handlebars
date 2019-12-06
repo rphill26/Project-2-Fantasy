@@ -1,61 +1,68 @@
-  <div class="box container" style="align-content: center; margin-top: 50px; margin-left: 100px;">
-        <div class="columns" style="background-color: gray;">
-            <div class="column is-half"><strong>Login</strong></div>
-            <div class="column is-half"><strong>Register</strong></div>
+    <!-- Field Table -->
+    <div id="main-container" class="container-fluid" style="width: 100%; max-width: 1082px; margin: 0 auto; clear: both;padding-top: 130px; min-height: calc(100vh - 70px); width: 1082px;">
+        <!-- <section class="section">
+            <div class="container" style="text-align: center; background-color: white;"> PICK 15 PLAYERS | BUDGET: 100m
+            </div>
+        </section> -->
+        <section class="main-section" style="width: 100%; max-width: 1082px; padding: 30px; margin: 0 0 40px;
+            background: #ffffff;
+            border: 1px solid #dddddd; height: 350px;">
+        <div class="row">
+        <div class="col-sm-6">
+        <h1 class="heading"
+                style="color: white; background-color: #5D0E5E; align-content: center; text-align: center;">
+                Log In
+            </h1>
+        </div>
+        <div class="col-sm-6">
+        <h1 class="heading"
+                style="color: white; background-color: #5D0E5E; align-content: center; text-align: center;">
+                Sign Up
+            </h1>
+        </div>
         </div>
 
-        <div class="columns">
-            <div class="column is-half" style="padding-bottom: 15px;"> 
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="fas fa-check"></i>
-                        </span>
+        <div class="row">
+            <div class="col-sm-6" style="padding-bottom: 15px; align-content:center; text-align:center;"> 
+                {{#if error}}
+                <div class="error" style="color:red">
+                    {{error}}
+                </div>
+                {{/if}}
+                <form action="/login" method="POST">
+                    <p>
+                        Email:
+                        <input type="text" name="email" placeholder="email@example.com">
                     </p>
-
-                </div>
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-lock"></i>
-                        </span>
+                    <p>
+                        Password:
+                        <input type="password" name="password" placeholder="password">
                     </p>
-                </div>
-
-                <div class="buttons has-addons is-right is-focused" type="submit">
-                    <button class="button"><a href="#">Login</a></button>
-
-                </div>
-
-
+                    <input type="submit" value="Login">
+                </form>
             </div>
 
-            <div class="column is-half" style="padding-bottom: 15px;"> 
+            <div class="col-sm-6" style="padding-bottom: 15px;"> 
                 <p>
-                    <strong>Don't have a Premier League account?</strong>
+                    <h1 style="align-content: center; text-align:center; font-size: 22px;">Don't have a UNCC Fantasy League account?</h1>
                     <br>
                     <br>
-                    <h2>In that case, you are missing out on:</h2>
-                    <br>
-                    <h2>- Fantasy Premier League football game,
-                        <br>
-                        - Exclusive fan services,
-                        <br>
-                        - Customized site content,
-                        <br>
-                        - Favorite Club information and notifications</h2>
-                </p>
-                <div class="buttons has-addons is-right is-focused" type="submit">
-                    <button class="button"><a href="register">Register</a></button>
+                    <h2 style="align-content: center; text-align:center;">Click below to register and you will gain access to:
+                    </br> The UNCC Fantasy Football Team Picker</h2>
 
+                    <br>
+                    <h2 style="align-content: center; text-align:center;"> Upcoming Possible Updates to the Picker Include:</h2>
+                    <p style="align-content: center; text-align:center;"> A maximum budget for spending on players
+                    <br> A way to save points earned from team players
+                    <br> A section for sharing scores and competing with your friends</p>
+                </p>    
+                <div class="row" style="margin-top: 20px; float: right; justify-content: right; align-content: right; text-align: right;">
+                    <a class="button" href="register">Register</a>
                 </div>
             </div>
         </div>
+    </div>
+    </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
