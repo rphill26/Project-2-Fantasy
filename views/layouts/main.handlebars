@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/assests/css/style.css">
+    <link rel="stylesheet" href="public/assests/css/style.css">
 
     <!--Title -->
     <title>Fantasy Football Main Page</title>
@@ -20,22 +18,20 @@
     <header id="masterheading">
     <div class="container">
     <nav class="navbar" role="navigation" aria-label="main navigation" style="width: 100%; background-color: #5d0e5e">
-        <a class="column-sm-8" href="main.handlebars">
+        <a class="column-sm-8" href="/index">
             <img src="assests/images/Logo-UNCC.png"  alt="Logo" style="height: 100%; width: 200px;">
         </a>
         <!-- https://courses.cs.washington.edu/courses/cse154/cp/18au/cp5/inkling/barclays-logo.png -->
 
         <div class="section column-sm-4" style="float: right;">
 
-             <!-- {{#if user}}
-            {{user.email}} |  -->
-            <a class="button" href="./mainpage"> Login </a> |
+             {{#if user}}
+            {{user.email}}
+            <a class="button" href="/login"> Login </a> 
+            <a class="button" href="register"> Register </a> 
+             {{else}}
 
-
-             <!-- {{else}} -->
-
-            <a class="button" href="register"> Register </a> |
-            <!-- {{/if}} -->
+            {{/if}}
 
             <a class="button" href="/logout.html"> Logout </a>
         </div>
@@ -51,7 +47,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/signup.js"></script>
 </body>
 <footer class="footer">
     <p class="p3">
