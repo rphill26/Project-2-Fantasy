@@ -14,52 +14,58 @@
             <!-- Forms for choosing players -->
             <div class="container" style="background-color:#666666;">
             <div class="col-sm-3" style="float: left; background-color:#666666;">
-            <form id="playerSearch" style="margin-bottom: 40px; background-color:#666666; text-align: center;">
+
+            {{!-- Goalkeepers --}}
+            <form id="playerSearch" action="/team" method="GET" style="margin-bottom: 40px; background-color:#666666; text-align: center;">
                     <label style="color: white; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
                     Goalkeepers:
                     </label>
                     </br>
-                    <input type="text" style="margin-bottom: 15px; width: 150px;"></input>
+                    <input type="text" name="keeper-name" style="margin-bottom: 15px; width: 150px;"></input>
                     <input type="submit"></input>
                     </form>
-            <form id="playerSearch" style="margin-bottom: 40px; background-color:#666666; text-align: center;">
+
+            {{!-- Defenders --}}
+            <form id="playerSearch" action="/team" method="GET" style="margin-bottom: 40px; background-color:#666666; text-align: center;">
                     <label style="color: white; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
                     Defenders:
                     </label>
                     </br>
-                    <input type="text" style="margin-bottom: 15px; width: 150px;"></input>
+                    <input type="text" name="defender-name" style="margin-bottom: 15px; width: 150px;"></input>
                     <input type="submit"></input>
                     </form>
-            <form id="playerSearch" style="margin-bottom: 40px; background-color:#666666; text-align: center;">
+            {{!-- Midfielders --}}
+            <form id="playerSearch" action="/team" method="GET"style="margin-bottom: 40px; background-color:#666666; text-align: center;">
                     <label style="color: white; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
                     Midfielders:
                     </label>
                     </br>
-                    <input type="text" style="margin-bottom: 15px; width: 150px;"></input>
+                    <input type="text" name="midfield-name" style="margin-bottom: 15px; width: 150px;"></input>
                     <input type="submit"></input>
                     </form>
-            <form id="playerSearch" style="margin-bottom: 40px; background-color:#666666; text-align: center;">
+            {{!-- Forwards --}}
+            <form id="playerSearch" action="/team" method="GET" style="margin-bottom: 40px; background-color:#666666; text-align: center;">
                     <label style="color: white; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
                     Forwards:
                     </label>
                     </br>
-                    <input type="text" style="margin-bottom: 15px; width: 150px;"></input>
+                    <input type="text" name="forward-name" style="margin-bottom: 15px; width: 150px;"></input>
                     <input type="submit"></input>
                     </form>
             </div>
             <div class="col-sm-9" style="float: right;">
-            <div class="table-responsive"
-                style="margin:auto; align-content: center; text-align: center; width:100%; height:600px; background-image: url(/public/assets/images/fieldExact.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div id="field" class="table-responsive"
+                style="margin:auto; align-content: center; text-align: center; width:100%; height:600px; background-image: url('public/assests/images/fieldExact.jpg'); background-size: cover; background-repeat: no-repeat;">
                 <table
                     style="margin:auto; align-content: center; text-align: center; width:100%; height: 25%; color: white;">
                     <tr>
                         <td style="align-content: center; width: 50%;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Goalkeeper
                         </td>
                         <td style="align-content: center; width: 50%;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Goalkeeper
                         </td>
@@ -69,27 +75,27 @@
                     style="margin:auto; align-content: center; text-align: center; width:100%; height: 25%; color: white;">
                     <tr>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Defender
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Defender
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Defender
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Defender
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Defender
                         </td>
@@ -99,27 +105,27 @@
                     style="margin:auto; align-content: center; text-align: center; width:100%; height: 25%; color: white;">
                     <tr>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             <span class="tag" style="bottom:0%;">Midfielder</span>
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             <span class="tag">Midfielder</span>
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             <span class="tag">Midfielder</span>
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             <span class="tag">Midfielder</span>
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             <span class="tag">Midfielder</span>
                         </td>
@@ -129,17 +135,17 @@
                     style="margin:auto; align-content: center; text-align: center; width:100%; height: 25%; color: white;">
                     <tr>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Forward
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Forward
                         </td>
                         <td style="align-content: center;">
-                            <img src="/public/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
+                            <img src="/assests/images/logosm.png" alt="" style="height:100px; width:100px;">
                             </br>
                             Forward
                         </td>
