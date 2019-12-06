@@ -25,13 +25,18 @@
             <a class="button" href="/login"> Login </a> 
 
 
-            <!-- {{else}} -->
-
-           <a class="button" href="register"> Register </a> 
-           <!-- {{/if}} -->
-
-           <a class="button" href="/logout.html"> Logout </a>
+             {{#if user}}
+            <a href="/team">
+                {{user.email}}
+            </a>
+           <a class="button" href="/logout"> Logout </a>
             </nav>
+            
+             {{else}}
+            <a class="button" href="/login"> Login </a> 
+            <a class="button" href="register"> Register </a> 
+            {{/if}}
+
         </div>
     </header>
 

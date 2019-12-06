@@ -107,6 +107,10 @@ width: 960px;
     border: 1px solid #dddddd;
   } */
 
+/* #field{
+  background-image: url('/public/assests/images/fieldExact.jpg');
+} */
+
 .footer {
 position: fixed;
 left: 0;
