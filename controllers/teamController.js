@@ -2,8 +2,9 @@ const express = require("express")
 const router = require("express").Router();
 
 router.get("/team", (req, res) => {
-    res.render("team/index");
+    console.log(req.user);
+    res.render("team/index", { user: req.user });
 });
 
-// db.Team.findOne({ where: { : req.body.email }})
+
 module.exports = router;

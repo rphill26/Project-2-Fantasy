@@ -25,15 +25,17 @@
         <div class="section column-sm-4" style="float: right;">
 
              {{#if user}}
-            {{user.email}}
+            <a href="/team">
+                {{user.email}}
+            </a>
+           <a class="button" href="/logout"> Logout </a>
+            </nav>
+            
+             {{else}}
             <a class="button" href="/login"> Login </a> 
             <a class="button" href="register"> Register </a> 
-             {{else}}
-
             {{/if}}
 
-           <a class="button" href="/logout.html"> Logout </a>
-            </nav>
         </div>
     </header>
 
