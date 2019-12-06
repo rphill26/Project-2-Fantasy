@@ -18,7 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(session({
-  secret: "keyboard cat"
+  secret: "keyboard cat",
+  resave:true,
+  saveUninitialized:true,
+  proxy:true
 }))
 
 //Static Assests
