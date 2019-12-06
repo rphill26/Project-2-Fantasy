@@ -6,8 +6,8 @@
         </section> -->
         <section class="main-section" style="width: 100%; max-width: 1082px; padding: 30px; margin: 0 0 40px;
             background: #ffffff;
-            border: 1px solid #dddddd; height: 350px;">
-        <div class="row">
+            border: 1px solid #dddddd; height: 50%;">
+        <div class="row" style="margin-bottom: 20px;">
         <div class="col-sm-6">
         <h1 class="heading"
                 style="color: white; background-color: #5D0E5E; align-content: center; text-align: center;">
@@ -29,36 +29,34 @@
                     {{error}}
                 </div>
                 {{/if}}
-                <form action="/login" method="POST">
-                    <p>
+                <form action="/login" method="POST" style="align-content: center; text-align:center;">
+                    <p style="align-content: center; text-align:center; padding-bottom: 15px;">
                         Email:
                         <input type="text" name="email" placeholder="email@example.com">
                     </p>
-                    <p>
+                    <p style="align-content: center; text-align:center; padding-bottom: 15px;">
                         Password:
                         <input type="password" name="password" placeholder="password">
                     </p>
-                    <input type="submit" value="Login">
+                    <input type="submit" class="btn btn-secondary" value="Login">
                 </form>
             </div>
-        </div> 
 
             <div class="col-sm-6" style="padding-bottom: 15px;"> 
                 <p>
                     <h1 style="align-content: center; text-align:center; font-size: 22px;">Don't have a UNCC Fantasy League account?</h1>
                     <br>
                     <br>
-                    <h2 style="align-content: center; text-align:center;">Click below to register and you will gain access to:
-                    </br> The UNCC Fantasy Football Team Picker</h2>
-
+                    <h2 style="align-content: center; text-align:center; font-size: 18px;">Click below to register and you will gain access to:</h2> 
+                    <p style="align-content: center; text-align:center;">The UNCC Fantasy Football Team Picker</p>
                     <br>
-                    <h2 style="align-content: center; text-align:center;"> Upcoming Possible Updates to the Picker Include:</h2>
+                    <h2 style="align-content: center; text-align:center; font-size: 18px;"> Upcoming Possible Updates to the Picker Include:</h2>
                     <p style="align-content: center; text-align:center;"> A maximum budget for spending on players
                     <br> A way to save points earned from team players
                     <br> A section for sharing scores and competing with your friends</p>
                 </p>    
-                <div class="row" style="margin-top: 20px; float: right; justify-content: right; align-content: right; text-align: right;">
-                    <a class="button" href="register">Register</a>
+                <div class="row" style="margin-top: 20px; float: center; justify-content: center; align-content: center; text-align: center;">
+                    <a class="btn btn-secondary" href="register">Register</a>
                 </div>
             </div>
         </div>
@@ -71,6 +69,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
 
 
   
