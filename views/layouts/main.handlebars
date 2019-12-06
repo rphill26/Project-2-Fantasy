@@ -14,7 +14,7 @@
 </head>    
 
 <body>
-    <header id="masterheading">
+      <header id="masterheading">
         <div class="container">
             <a href="/index" id="logo"> 
                 <img src="assests/images/Logo-UNCC.png"  alt="logo" style="height: 100%; width: 200px;">
@@ -25,18 +25,26 @@
             <a class="button" href="/login"> Login </a> 
 
 
-             {{#if user}}
+            <!-- {{else}} -->
+
+           <a class="button" href="register"> Register </a> 
+           <!-- {{/if}} -->
+
+           {{#if user}}
             <a href="/team">
                 {{user.email}}
             </a>
-           <a class="button" href="/register"> Logout </a>
-            </nav>
             
-             {{else}}
+           <a class="button" href="resgister"> Logout </a>
+            </nav>
+
+            
+            {{else}}
             <a class="button" href="/login"> Login </a> 
             <a class="button" href="register"> Register </a> 
             {{/if}}
 
+            </nav>
         </div>
     </header>
 
