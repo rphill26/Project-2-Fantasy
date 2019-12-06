@@ -19,7 +19,7 @@ router.post("/login", (req, res) => {
             }
 
             req.session.userId = user.id;
-            res.redirect("/login");
+            res.redirect("/team");
         })
         .catch(err => {
             console.log(err);

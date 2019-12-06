@@ -53,6 +53,7 @@ app.use((req, res, next) => {
 app.use(require("./controllers/staticController"));
 app.use(require("./controllers/userController"));
 app.use(require("./controllers/authController"));
+app.use(require("./controllers/teamController"));
 
 
 // Sync Schema
