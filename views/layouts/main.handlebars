@@ -20,24 +20,14 @@
                 <img src="assests/images/Logo-UNCC.png"  alt="logo" style="height: 100%; width: 200px;">
             </a>
             <nav>
-                 <!-- {{#if user}}
-            {{user.email}} |  -->
-            <a class="button" href="/login"> Login </a> 
-
-
-            <!-- {{else}} -->
-
-           <a class="button" href="register"> Register </a> 
-           <!-- {{/if}} -->
-
+            <a class="button" href="register"> Logout </a>
+            
            {{#if user}}
             <a href="/team">
                 {{user.email}}
             </a>
-            
-           <a class="button" href="resgister"> Logout </a>
-            </nav>
 
+           <a class="button" href="register"> Logout </a>
             
             {{else}}
             <a class="button" href="/login"> Login </a> 
