@@ -9,38 +9,33 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/assests/css/style.css">
+    <link rel="stylesheet" href="assests/css/style.css">
 
     <!--Title -->
     <title>Fantasy Football Main Page</title>
 </head>
 
+    <header id="masterheading">
+        <div class="container">
+            <a href="index.html" id="logo">League Logo</a>
+            <nav>
+                 <!-- {{#if user}}
+            {{user.email}} |  -->
+            <a class="button" href="./mainpage.html"> Login </a> 
+
+
+            <!-- {{else}} -->
+
+           <a class="button" href="./register.html"> Register </a> 
+           <!-- {{/if}} -->
+
+           <a class="button" href="/logout.html"> Logout </a>
+            </nav>
+        </div>
+    </header>
+    
 <body>
 
-    <header id="masterheading">
-    <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation" style="width: 100%; background-color: #5d0e5e">
-        <a class="column-sm-8" href="main.handlebars">
-            <img src="../../public/assests/images/Logo-UNCC.png"  alt="Logo" style="height: 100%; width: 200px;">
-        </a>
-        <!-- https://courses.cs.washington.edu/courses/cse154/cp/18au/cp5/inkling/barclays-logo.png -->
-
-        <div class="section column-sm-4" style="float: right;">
-
-             <!-- {{#if user}}
-            {{user.email}} |  -->
-            <a class="button" href="./mainpage"> Login </a> |
-
-
-             <!-- {{else}} -->
-
-            <a class="button" href="views\layouts\register.handlebars"> Register </a> |
-            <!-- {{/if}} -->
-
-            <a class="button" href="/logout.html"> Logout </a>
-        </div>
-    </nav>
-    </header>
 
     {{{ body }}}
 
